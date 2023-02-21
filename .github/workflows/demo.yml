@@ -10,21 +10,19 @@ jobs:
     steps:
       - name: Set environment variables
         run: |
-          echo "DEMO=xxx" >> $GITHUB_ENV
+          echo "DEMO=x" >> $GITHUB_ENV
 
-
-
-      - name: aaa
-        if: ${{ env.DEMO }} == "aaa"
+      - name: a
+        if: ${{ env.DEMO }} == "a"
         run: |
-          echo 1
+          echo a
 
-      - name: bbb
-        if: ${{ env.DEMO }} == "bbb"
+      - name: b
+        if: env.DEMO == "b"
         run: |
-          echo 1
+          echo b
 
-      - name: xxx
-        if: ${{ env.DEMO }} == "xxx"
+      - name: x
+        if: env.DEMO == "x"
         run: |
-          echo 1
+          echo x
