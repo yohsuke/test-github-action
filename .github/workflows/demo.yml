@@ -1,0 +1,30 @@
+name: demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set environment variables
+        run: |
+          echo "DEMO=xxx" >> $GITHUB_ENV
+
+
+
+      - name: aaa
+        if: ${{ env.DEMO }} == "aaa"
+        run: |
+          echo 1
+
+      - name: bbb
+        if: ${{ env.DEMO }} == "bbb"
+        run: |
+          echo 1
+
+      - name: xxx
+        if: ${{ env.DEMO }} == "xxx"
+        run: |
+          echo 1
