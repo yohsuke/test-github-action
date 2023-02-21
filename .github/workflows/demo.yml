@@ -18,11 +18,11 @@ jobs:
           echo a
 
       - name: b
-        if: env.DEMO == "b"
+        if: env.DEMO == 'b'
         run: |
           echo b
 
       - name: x
-        if: env.DEMO == "x"
+        if: env.DEMO == 'x'
         run: |
           echo x
